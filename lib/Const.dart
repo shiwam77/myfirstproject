@@ -28,6 +28,8 @@ final kitalictextstyle = TextStyle(
   fontStyle: FontStyle.italic,
 );
 
+const kcontainermargin = EdgeInsets.fromLTRB(20, 20, 20, 20);
+
 class ButtomButtons extends StatelessWidget {
   ButtomButtons({@required this.text, this.width, @required this.onPressed});
   final double width;
@@ -55,6 +57,7 @@ class ButtomButtons extends StatelessWidget {
     );
   }
 }
+
 class ImageContainer extends StatelessWidget {
   ImageContainer({@required this.imgUrl});
   final String imgUrl;

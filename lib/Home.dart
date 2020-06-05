@@ -5,6 +5,7 @@ import 'Const.dart';
 import 'MyProfile.dart';
 import 'Responsive.dart';
 
+//Done by using Expanded Widget
 class Home extends StatefulWidget {
   @override
   _HomeState createState() => _HomeState();
@@ -43,9 +44,8 @@ class _HomeState extends State<Home> {
                         children: [
                           Expanded(
                             child: Container(
-                              margin: EdgeInsets.all(10.0),
+                              margin: kcontainermargin,
                               child: Container(
-                                width: SizeConfig.blockSizeHorizontal * 50,
                                 height: 20,
                                 alignment: Alignment.center,
                                 color: Color(0xffFFFFFF).withOpacity(.9),
@@ -68,7 +68,6 @@ class _HomeState extends State<Home> {
                                     blurRadius: 10,
                                     color: Color(0xff000000).withOpacity(.6),
                                     spreadRadius: 1,
-                                    // changes position of shadow
                                   ),
                                 ],
                                 image: DecorationImage(
@@ -80,7 +79,7 @@ class _HomeState extends State<Home> {
                           ),
                           Expanded(
                             child: Container(
-                              margin: EdgeInsets.all(10.0),
+                              margin: kcontainermargin,
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.baseline,
                                 textBaseline: TextBaseline.alphabetic,
@@ -99,18 +98,15 @@ class _HomeState extends State<Home> {
                                             Color(0xff424242).withOpacity(.5),
                                         fontSize: 14.0),
                                   ),
-                                  Container(
-                                    child: ButtonTheme(
-                                      minWidth: 212.0,
-                                      height: 25.0,
-                                      child: RaisedButton(
-                                        child: Text("HEALTH & LIFESTYLE"),
-                                        onPressed: () {},
-                                        color:
-                                            Color(0xff5567C9).withOpacity(.7),
-                                        textColor: Colors.white,
-                                        splashColor: Colors.grey,
-                                      ),
+                                  ButtonTheme(
+                                    minWidth: 212.0,
+                                    height: 25.0,
+                                    child: RaisedButton(
+                                      child: FittedBox(child: Text("HEALTH & LIFESTYLE")),
+                                      onPressed: () {},
+                                      color: Color(0xff5567C9).withOpacity(.7),
+                                      textColor: Colors.white,
+                                      splashColor: Colors.grey,
                                     ),
                                   ),
                                   Row(
@@ -213,11 +209,10 @@ class _HomeState extends State<Home> {
                           Expanded(
                             child: Container(
                               alignment: Alignment.center,
-                              margin: EdgeInsets.all(10.0),
+                              margin: kcontainermargin,
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.baseline,
                                 textBaseline: TextBaseline.alphabetic,
-                                mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
                                   Text(
                                     '321',
@@ -268,8 +263,19 @@ class _HomeState extends State<Home> {
                           ),
                           Expanded(
                             child: Container(
-                              margin: EdgeInsets.all(10),
-                              child: SizedBox(
+                              margin: kcontainermargin,
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(8),
+                                  boxShadow: [
+                                    BoxShadow(
+                                      blurRadius: 10,
+                                      color: Color(0xff000000).withOpacity(.6),
+                                      spreadRadius: 1,
+                                      // changes position of shadow
+                                    ),
+                                  ],
+                                ),
                                 height: SizeConfig.blockSizeVertical * 22,
                                 width: double.infinity,
                                 child: Carousel(
@@ -299,13 +305,13 @@ class _HomeState extends State<Home> {
                         children: [
                           Expanded(
                             child: Container(
-                              margin: EdgeInsets.all(10),
+                              margin: kcontainermargin,
                               child: ImageContainer(imgUrl: url),
                             ),
                           ),
                           Expanded(
                             child: Container(
-                              margin: EdgeInsets.all(10),
+                              margin: kcontainermargin,
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.baseline,
                                 textBaseline: TextBaseline.alphabetic,
@@ -369,7 +375,7 @@ class _HomeState extends State<Home> {
                           Expanded(
                             child: Container(
                               alignment: Alignment.center,
-                              margin: EdgeInsets.all(10),
+                              margin: kcontainermargin,
                               child: Row(
                                 children: [
                                   Container(
@@ -395,7 +401,7 @@ class _HomeState extends State<Home> {
                           ),
                           Expanded(
                             child: Container(
-                              margin: EdgeInsets.all(10),
+                              margin: kcontainermargin,
                               child: ImageContainer(imgUrl: url),
                             ),
                           ),
@@ -407,13 +413,13 @@ class _HomeState extends State<Home> {
                         children: [
                           Expanded(
                             child: Container(
-                              margin: EdgeInsets.all(10),
+                              margin: kcontainermargin,
                               child: ImageContainer(imgUrl: url),
                             ),
                           ),
                           Expanded(
                             child: Container(
-                              margin: EdgeInsets.all(10),
+                              margin: kcontainermargin,
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.baseline,
                                 textBaseline: TextBaseline.alphabetic,
@@ -427,7 +433,7 @@ class _HomeState extends State<Home> {
                                     style: ksubtextstyle,
                                   ),
                                   SizedBox(
-                                    height: 20,
+                                    height: 30,
                                   ),
                                   Row(
                                     children: [
@@ -468,7 +474,7 @@ class _HomeState extends State<Home> {
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.all(10),
+                      margin: kcontainermargin,
                       child: Column(
                         children: [
                           Container(
@@ -550,7 +556,7 @@ class _HomeState extends State<Home> {
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.all(10),
+                      margin: kcontainermargin,
                       child: Row(
                         children: [
                           Expanded(

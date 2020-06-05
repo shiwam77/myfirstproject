@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'Const.dart';
 import 'Responsive.dart';
 
+//Done without using Expanded Widget
 class MyProfile extends StatefulWidget {
   @override
   _MyProfileState createState() => _MyProfileState();
@@ -37,7 +38,7 @@ class _MyProfileState extends State<MyProfile> {
                     Container(
                       margin: EdgeInsets.only(top: 20.0),
                       child: Container(
-                        width: SizeConfig.blockSizeHorizontal * 40,
+                        width: SizeConfig.blockSizeHorizontal * 35,
                         height: 20,
                         alignment: Alignment.center,
                         color: Color(0xffFFFFFF).withOpacity(.9),
@@ -77,7 +78,6 @@ class _MyProfileState extends State<MyProfile> {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.baseline,
                           textBaseline: TextBaseline.alphabetic,
-                          mainAxisAlignment: MainAxisAlignment.start,
                           children: [
                             Text(
                               "Clair - Fit 30 Days",
