@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'MyProfile.dart';
+import 'Home.dart';
 
 void main() {
   runApp(MyApp());
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
         primaryColor: Colors.white,
         scaffoldBackgroundColor: Colors.white,
       ),
-      home: MyProfile(),
+      home: Home(),
     );
   }
 }

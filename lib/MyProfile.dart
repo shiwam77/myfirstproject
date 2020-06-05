@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'Const.dart';
 import 'Responsive.dart';
 
 class MyProfile extends StatefulWidget {
@@ -20,8 +21,7 @@ class _MyProfileState extends State<MyProfile> {
       appBar: AppBar(
         title: Text(
           'My Profile',
-          style:
-              TextStyle(fontSize: 22.0, color: Color.fromRGBO(97, 97, 97, 0.3)),
+          style: kPagetitle,
         ),
       ),
       body: SingleChildScrollView(
@@ -64,9 +64,7 @@ class _MyProfileState extends State<MyProfile> {
                           ),
                         ],
                         image: DecorationImage(
-                            image: new NetworkImage(
-                                "https://storage.googleapis.com/gd-wagtail-prod-assets/original_images/MDA2018_inline_03.jpg"),
-                            fit: BoxFit.fill),
+                            image: new NetworkImage(url), fit: BoxFit.fill),
                       ),
                     ),
                     SizedBox(
@@ -94,7 +92,7 @@ class _MyProfileState extends State<MyProfile> {
                             ),
                             Container(
                               child: ButtonTheme(
-                                minWidth: 190.0,
+                                minWidth: 200.0,
                                 height: 25.0,
                                 child: RaisedButton(
                                   child: Text("HEALTH & LIFESTYLE"),
@@ -124,11 +122,7 @@ class _MyProfileState extends State<MyProfile> {
                                     children: [
                                       Text(
                                         '21',
-                                        style: TextStyle(
-                                          color: Color(0xff616161),
-                                          fontSize: 56,
-                                          fontWeight: FontWeight.w500,
-                                        ),
+                                        style: kmaintextstyle,
                                       ),
                                       Text(
                                         'k',
@@ -141,11 +135,7 @@ class _MyProfileState extends State<MyProfile> {
                                   ),
                                   Text(
                                     'FOLLOWER',
-                                    style: TextStyle(
-                                        color:
-                                            Color(0xff616161).withOpacity(.6),
-                                        fontSize: 18,
-                                        fontWeight: FontWeight.w500),
+                                    style: ksubtextstyle,
                                   ),
                                 ],
                               ),
@@ -220,20 +210,11 @@ class _MyProfileState extends State<MyProfile> {
                                     Text(
                                       '321',
                                       textAlign: TextAlign.end,
-                                      style: TextStyle(
-                                        color: Color(0xff616161),
-                                        fontSize: 56,
-                                        fontWeight: FontWeight.w500,
-                                      ),
+                                      style: kmaintextstyle,
                                     ),
                                     Text(
                                       'POSTS',
-                                      style: TextStyle(
-                                        color:
-                                            Color(0xff616161).withOpacity(.6),
-                                        fontSize: 18,
-                                        fontWeight: FontWeight.w500,
-                                      ),
+                                      style: ksubtextstyle,
                                       textAlign: TextAlign.end,
                                     ),
                                     SizedBox(
@@ -245,24 +226,12 @@ class _MyProfileState extends State<MyProfile> {
                                           children: [
                                             Text(
                                               '4 posts',
-                                              style: TextStyle(
-                                                color: Color(0xff616161)
-                                                    .withOpacity(.8)
-                                                    .withOpacity(.6),
-                                                fontSize: 16,
-                                                fontWeight: FontWeight.w500,
-                                              ),
+                                              style: kinfotextstyle,
                                               textAlign: TextAlign.end,
                                             ),
                                             Text(
                                               'per week',
-                                              style: TextStyle(
-                                                color: Color(0xff616161)
-                                                    .withOpacity(.8)
-                                                    .withOpacity(.6),
-                                                fontSize: 16,
-                                                fontWeight: FontWeight.w500,
-                                              ),
+                                              style: kinfotextstyle,
                                               textAlign: TextAlign.end,
                                             ),
                                           ],
@@ -316,18 +285,11 @@ class _MyProfileState extends State<MyProfile> {
                       children: [
                         Text(
                           '21%',
-                          style: TextStyle(
-                            color: Color(0xff616161),
-                            fontSize: 56,
-                            fontWeight: FontWeight.w500,
-                          ),
+                          style: kmaintextstyle,
                         ),
                         Text(
                           'ENGAGEMENT',
-                          style: TextStyle(
-                              color: Color(0xff616161).withOpacity(.6),
-                              fontSize: 18,
-                              fontWeight: FontWeight.w500),
+                          style: ksubtextstyle,
                         ),
                         SizedBox(
                           height: 20,
@@ -351,27 +313,15 @@ class _MyProfileState extends State<MyProfile> {
                               children: [
                                 Text(
                                   '42K Likes',
-                                  style: TextStyle(
-                                    color: Color(0xff616161).withOpacity(.8),
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.w500,
-                                  ),
+                                  style: kinfotextstyle,
                                 ),
                                 Text(
                                   '42K Comments',
-                                  style: TextStyle(
-                                    color: Color(0xff616161).withOpacity(.8),
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.w500,
-                                  ),
+                                  style: kinfotextstyle,
                                 ),
                                 Text(
                                   'this month',
-                                  style: TextStyle(
-                                    color: Color(0xff616161).withOpacity(.8),
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.w500,
-                                  ),
+                                  style: kinfotextstyle,
                                 ),
                               ],
                             ),
@@ -400,13 +350,7 @@ class _MyProfileState extends State<MyProfile> {
                     Flexible(
                       child: Text(
                         '"Started my health & fitness journey with yoga and now training 1000+s".',
-                        strutStyle: StrutStyle.disabled,
-                        style: TextStyle(
-                          color: Color(0xff616161),
-                          fontSize: 16,
-                          fontWeight: FontWeight.w500,
-                          fontStyle: FontStyle.italic,
-                        ),
+                        style: kitalictextstyle,
                       ),
                     ),
                     SizedBox(
@@ -440,18 +384,11 @@ class _MyProfileState extends State<MyProfile> {
                       children: [
                         Text(
                           '221%',
-                          style: TextStyle(
-                            color: Color(0xff616161),
-                            fontSize: 56,
-                            fontWeight: FontWeight.w500,
-                          ),
+                          style: kmaintextstyle,
                         ),
                         Text(
                           'REACH',
-                          style: TextStyle(
-                              color: Color(0xff616161).withOpacity(.6),
-                              fontSize: 18,
-                              fontWeight: FontWeight.w500),
+                          style: ksubtextstyle,
                         ),
                         SizedBox(
                           height: 20,
@@ -475,19 +412,11 @@ class _MyProfileState extends State<MyProfile> {
                               children: [
                                 Text(
                                   '42K Impression',
-                                  style: TextStyle(
-                                    color: Color(0xff616161).withOpacity(.8),
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.w500,
-                                  ),
+                                  style: kinfotextstyle,
                                 ),
                                 Text(
                                   'this month',
-                                  style: TextStyle(
-                                    color: Color(0xff616161).withOpacity(.8),
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.w500,
-                                  ),
+                                  style: kinfotextstyle,
                                 ),
                               ],
                             ),
@@ -680,72 +609,6 @@ class _MyProfileState extends State<MyProfile> {
             ),
           ),
         ),
-      ),
-    );
-  }
-}
-
-class ButtomButtons extends StatelessWidget {
-  ButtomButtons({@required this.text, this.width, @required this.onPressed});
-  final double width;
-  final String text;
-  final Function onPressed;
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(vertical: 15.0),
-      child: Material(
-        color: Color(0xffECEFF1),
-        borderRadius: BorderRadius.all(Radius.circular(30.0)),
-        elevation: 5.0,
-        child: MaterialButton(
-          onPressed: onPressed,
-          minWidth: width,
-          child: Text(
-            text,
-            style: TextStyle(
-              color: Color(0xff616161),
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-class Rectanglebutton extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return RaisedButton(
-      child: Text("HEALTH & LIFESTYLE"),
-      onPressed: () {},
-      color: Color(0xff5567C9).withOpacity(.7),
-      textColor: Colors.white,
-      splashColor: Colors.grey,
-    );
-  }
-}
-
-class ImageContainer extends StatelessWidget {
-  ImageContainer({@required this.imgUrl});
-  final String imgUrl;
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 182,
-      width: SizeConfig.blockSizeHorizontal * 35,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(8),
-        boxShadow: [
-          BoxShadow(
-            blurRadius: 10,
-            color: Color(0xff000000).withOpacity(.6),
-            spreadRadius: 1,
-            // changes position of shadow
-          ),
-        ],
-        image:
-            DecorationImage(image: new NetworkImage(imgUrl), fit: BoxFit.fill),
       ),
     );
   }
