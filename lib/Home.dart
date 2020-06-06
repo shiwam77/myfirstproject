@@ -19,8 +19,6 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     SizeConfig().init(context);
 
-    print(SizeConfig.blockSizeVertical);
-    print(SizeConfig.blockSizeHorizontal);
     return Scaffold(
         appBar: AppBar(
           title: Text(
@@ -46,15 +44,31 @@ class _HomeState extends State<Home> {
                             child: Container(
                               margin: kcontainermargin,
                               child: Container(
-                                height: 20,
-                                alignment: Alignment.center,
-                                color: Color(0xffFFFFFF).withOpacity(.9),
-                                child: Text(
-                                  'CREATOR',
-                                  textAlign: TextAlign.center,
-                                  style: TextStyle(
-                                    color: Color(0xff616161),
-                                  ),
+                                width: SizeConfig.blockSizeHorizontal * 35,
+                                child: Stack(
+                                  children: [
+                                    ImageContainer(
+                                      imgUrl: url,
+                                    ),
+                                    Positioned(
+                                      bottom: 15,
+                                      child: Container(
+                                        height: 25,
+                                        alignment: Alignment.center,
+                                        width:
+                                            SizeConfig.blockSizeHorizontal * 35,
+                                        color:
+                                            Color(0xffFFFFFF).withOpacity(.9),
+                                        child: Text(
+                                          'CREATOR',
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                            color: Color(0xff616161),
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
                                 ),
                               ),
                               alignment: Alignment.bottomCenter,
@@ -81,8 +95,7 @@ class _HomeState extends State<Home> {
                             child: Container(
                               margin: kcontainermargin,
                               child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.baseline,
-                                textBaseline: TextBaseline.alphabetic,
+                                crossAxisAlignment: CrossAxisAlignment.start,
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 children: [
                                   Text(
@@ -102,7 +115,8 @@ class _HomeState extends State<Home> {
                                     minWidth: 212.0,
                                     height: 25.0,
                                     child: RaisedButton(
-                                      child: FittedBox(child: Text("HEALTH & LIFESTYLE")),
+                                      child: FittedBox(
+                                          child: Text("HEALTH & LIFESTYLE")),
                                       onPressed: () {},
                                       color: Color(0xff5567C9).withOpacity(.7),
                                       textColor: Colors.white,
@@ -153,6 +167,8 @@ class _HomeState extends State<Home> {
                                           Row(
                                             children: [
                                               Column(
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.end,
                                                 children: [
                                                   Text(
                                                     '10% MOM',
@@ -178,14 +194,8 @@ class _HomeState extends State<Home> {
                                               SizedBox(
                                                 width: 5,
                                               ),
-                                              Container(
+                                              RectangularBar(
                                                 height: 31,
-                                                width: 6,
-                                                decoration: BoxDecoration(
-                                                  borderRadius:
-                                                      BorderRadius.circular(1),
-                                                  color: Color(0xff64DD17),
-                                                ),
                                               ),
                                             ],
                                           ),
@@ -208,52 +218,43 @@ class _HomeState extends State<Home> {
                         children: [
                           Expanded(
                             child: Container(
-                              alignment: Alignment.center,
                               margin: kcontainermargin,
                               child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.baseline,
-                                textBaseline: TextBaseline.alphabetic,
+                                crossAxisAlignment: CrossAxisAlignment.end,
                                 children: [
                                   Text(
-                                    '321',
-                                    textAlign: TextAlign.end,
+                                    '3152',
                                     style: kmaintextstyle,
                                   ),
                                   Text(
                                     'POSTS',
                                     style: ksubtextstyle,
-                                    textAlign: TextAlign.end,
                                   ),
                                   SizedBox(
-                                    height: 40,
+                                    height: SizeConfig.blockSizeVertical * 7,
                                   ),
                                   Row(
+                                    mainAxisAlignment: MainAxisAlignment.end,
                                     children: [
                                       Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.end,
                                         children: [
                                           Text(
                                             '4 posts',
                                             style: kinfotextstyle,
-                                            textAlign: TextAlign.end,
                                           ),
                                           Text(
                                             'per week',
                                             style: kinfotextstyle,
-                                            textAlign: TextAlign.end,
                                           ),
                                         ],
                                       ),
                                       SizedBox(
                                         width: 10,
                                       ),
-                                      Container(
+                                      RectangularBar(
                                         height: 31,
-                                        width: 6,
-                                        decoration: BoxDecoration(
-                                          borderRadius:
-                                              BorderRadius.circular(1),
-                                          color: Color(0xff64DD17),
-                                        ),
                                       ),
                                     ],
                                   ),
@@ -325,18 +326,12 @@ class _HomeState extends State<Home> {
                                     style: ksubtextstyle,
                                   ),
                                   SizedBox(
-                                    height: 20,
+                                    height: SizeConfig.blockSizeVertical * 3,
                                   ),
                                   Row(
                                     children: [
-                                      Container(
+                                      RectangularBar(
                                         height: 60,
-                                        width: 6,
-                                        decoration: BoxDecoration(
-                                          borderRadius:
-                                              BorderRadius.circular(1),
-                                          color: Color(0xff64DD17),
-                                        ),
                                       ),
                                       SizedBox(
                                         width: 10,
@@ -378,13 +373,8 @@ class _HomeState extends State<Home> {
                               margin: kcontainermargin,
                               child: Row(
                                 children: [
-                                  Container(
+                                  RectangularBar(
                                     height: 80,
-                                    width: 6,
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(1),
-                                      color: Color(0xff64DD17),
-                                    ),
                                   ),
                                   SizedBox(
                                     width: 10,
@@ -421,8 +411,7 @@ class _HomeState extends State<Home> {
                             child: Container(
                               margin: kcontainermargin,
                               child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.baseline,
-                                textBaseline: TextBaseline.alphabetic,
+                                crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
                                     '221%',
@@ -433,18 +422,12 @@ class _HomeState extends State<Home> {
                                     style: ksubtextstyle,
                                   ),
                                   SizedBox(
-                                    height: 30,
+                                    height: SizeConfig.blockSizeVertical * 3,
                                   ),
                                   Row(
                                     children: [
-                                      Container(
+                                      RectangularBar(
                                         height: 44,
-                                        width: 6,
-                                        decoration: BoxDecoration(
-                                          borderRadius:
-                                              BorderRadius.circular(1),
-                                          color: Color(0xff64DD17),
-                                        ),
                                       ),
                                       SizedBox(
                                         width: 10,

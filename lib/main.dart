@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'Home.dart';
+import 'waytodothoughttwo.dart';
 
 void main() {
   runApp(MyApp());

@@ -82,3 +82,19 @@ class ImageContainer extends StatelessWidget {
     );
   }
 }
+
+class RectangularBar extends StatelessWidget {
+  final double height;
+  RectangularBar({@required this.height});
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: height,
+      width: 6,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(1),
+        color: Color(0xff64DD17),
+      ),
+    );
+  }
+}
