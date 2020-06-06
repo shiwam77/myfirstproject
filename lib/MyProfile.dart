@@ -358,10 +358,7 @@ class _MyProfileState extends State<MyProfile> {
                     ),
                     Column(
                       children: [
-                        ImageContainer(
-                          imgUrl:
-                              "https://storage.googleapis.com/gd-wagtail-prod-assets/original_images/MDA2018_inline_03.jpg",
-                        ),
+                        ImageContainer(imgUrl: url),
                       ],
                     )
                   ],
@@ -371,10 +368,7 @@ class _MyProfileState extends State<MyProfile> {
                 ),
                 Row(
                   children: [
-                    ImageContainer(
-                      imgUrl:
-                          "https://storage.googleapis.com/gd-wagtail-prod-assets/original_images/MDA2018_inline_03.jpg",
-                    ),
+                    ImageContainer(imgUrl: url),
                     SizedBox(
                       width: 30,
                     ),
@@ -455,53 +449,50 @@ class _MyProfileState extends State<MyProfile> {
                     ),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 10, right: 10),
-                  child: Column(
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          ButtomButtons(
-                            text: 'colabs',
-                            onPressed: () {},
-                          ),
-                          ButtomButtons(
-                            text: 'shout outs',
-                            onPressed: () {},
-                          ),
-                          ButtomButtons(
-                            text: 'campaigns',
-                            onPressed: () {},
-                          ),
-                        ],
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          ButtomButtons(
-                            text: 'gigs',
-                            onPressed: () {},
-                          ),
-                          ButtomButtons(
-                            text: 'product reviews ',
-                            onPressed: () {},
-                          ),
-                        ],
-                      ),
-                      ButtonTheme(
-                        minWidth: 253,
-                        height: 32.0,
-                        child: RaisedButton(
-                          child: Text("LETS COLLAB!"),
+                Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        ButtomButtons(
+                          text: 'colabs',
                           onPressed: () {},
-                          color: Color(0xff3F51B5),
-                          textColor: Color(0xffFFFFFF),
-                          splashColor: Colors.grey,
                         ),
+                        ButtomButtons(
+                          text: 'shout outs',
+                          onPressed: () {},
+                        ),
+                        ButtomButtons(
+                          text: 'campaigns',
+                          onPressed: () {},
+                        ),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        ButtomButtons(
+                          text: 'gigs',
+                          onPressed: () {},
+                        ),
+                        ButtomButtons(
+                          text: 'product reviews ',
+                          onPressed: () {},
+                        ),
+                      ],
+                    ),
+                    ButtonTheme(
+                      minWidth: 253,
+                      height: 32.0,
+                      child: RaisedButton(
+                        child: Text("LETS COLLAB!"),
+                        onPressed: () {},
+                        color: Color(0xff3F51B5),
+                        textColor: Color(0xffFFFFFF),
+                        splashColor: Colors.grey,
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
                 SizedBox(
                   height: 40,
@@ -522,9 +513,7 @@ class _MyProfileState extends State<MyProfile> {
                           ),
                         ],
                         image: DecorationImage(
-                            image: new NetworkImage(
-                                "https://storage.googleapis.com/gd-wagtail-prod-assets/original_images/MDA2018_inline_03.jpg"),
-                            fit: BoxFit.fill),
+                            image: new NetworkImage(url), fit: BoxFit.fill),
                       ),
                     ),
                     SizedBox(

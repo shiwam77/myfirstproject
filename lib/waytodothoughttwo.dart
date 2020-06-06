@@ -47,6 +47,7 @@ class _waytodothoughttwoState extends State<waytodothoughttwo> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
                             children: [
                               Container(
                                 child: Stack(
@@ -142,7 +143,7 @@ class _waytodothoughttwoState extends State<waytodothoughttwo> {
                                     ],
                                   ),
                                   SizedBox(
-                                    width: SizeConfig.blockSizeHorizontal * 12,
+                                    width: SizeConfig.blockSizeHorizontal * 5,
                                   ),
                                   Column(
                                     children: [
@@ -207,6 +208,7 @@ class _waytodothoughttwoState extends State<waytodothoughttwo> {
                                 child: Column(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
+                                  crossAxisAlignment: CrossAxisAlignment.end,
                                   children: [
                                     Column(
                                       crossAxisAlignment:
@@ -220,33 +222,34 @@ class _waytodothoughttwoState extends State<waytodothoughttwo> {
                                           'POSTS',
                                           style: ksubtextstyle,
                                         ),
-                                        SizedBox(
-                                          height:
-                                              SizeConfig.blockSizeVertical * 5,
-                                        ),
-                                        Row(
+                                      ],
+                                    ),
+                                    SizedBox(
+                                      height: SizeConfig.blockSizeVertical * 8,
+                                    ),
+                                    Row(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.end,
+                                      children: [
+                                        Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.end,
                                           children: [
-                                            Column(
-                                              crossAxisAlignment:
-                                                  CrossAxisAlignment.end,
-                                              children: [
-                                                Text(
-                                                  '4 posts',
-                                                  style: kinfotextstyle,
-                                                ),
-                                                Text(
-                                                  'per week',
-                                                  style: kinfotextstyle,
-                                                ),
-                                              ],
+                                            Text(
+                                              '4 posts',
+                                              style: kinfotextstyle,
                                             ),
-                                            SizedBox(
-                                              width: 10,
-                                            ),
-                                            RectangularBar(
-                                              height: 31,
+                                            Text(
+                                              'per week',
+                                              style: kinfotextstyle,
                                             ),
                                           ],
+                                        ),
+                                        SizedBox(
+                                          width: 10,
+                                        ),
+                                        RectangularBar(
+                                          height: 31,
                                         ),
                                       ],
                                     ),
@@ -273,44 +276,54 @@ class _waytodothoughttwoState extends State<waytodothoughttwo> {
                             ],
                           ),
                           Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(
-                                '21%',
-                                style: kmaintextstyle,
-                              ),
-                              Text(
-                                'ENGAGEMENT',
-                                style: ksubtextstyle,
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
+                                    '21%',
+                                    style: kmaintextstyle,
+                                  ),
+                                  Text(
+                                    'ENGAGEMENT',
+                                    style: ksubtextstyle,
+                                  ),
+                                ],
                               ),
                               SizedBox(
-                                height: SizeConfig.blockSizeVertical * 3,
+                                height: SizeConfig.blockSizeVertical * 8,
                               ),
-                              Row(
+                              Column(
                                 children: [
-                                  RectangularBar(
-                                    height: 60,
-                                  ),
-                                  SizedBox(
-                                    width: 10,
-                                  ),
-                                  Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.baseline,
-                                    textBaseline: TextBaseline.alphabetic,
+                                  Row(
                                     children: [
-                                      Text(
-                                        '42K Likes',
-                                        style: kinfotextstyle,
+                                      RectangularBar(
+                                        height: 60,
                                       ),
-                                      Text(
-                                        '42K Comments',
-                                        style: kinfotextstyle,
+                                      SizedBox(
+                                        width: 10,
                                       ),
-                                      Text(
-                                        'this month',
-                                        style: kinfotextstyle,
+                                      Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            '42K Likes',
+                                            style: kinfotextstyle,
+                                          ),
+                                          Text(
+                                            '42K Comments',
+                                            style: kinfotextstyle,
+                                          ),
+                                          Text(
+                                            'this month',
+                                            style: kinfotextstyle,
+                                          ),
+                                        ],
                                       ),
                                     ],
                                   ),
@@ -374,19 +387,25 @@ class _waytodothoughttwoState extends State<waytodothoughttwo> {
                             ],
                           ),
                           Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Text(
-                                '221%',
-                                style: kmaintextstyle,
-                              ),
-                              Text(
-                                'REACH',
-                                style: ksubtextstyle,
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
+                                    '221%',
+                                    style: kmaintextstyle,
+                                  ),
+                                  Text(
+                                    'REACH',
+                                    style: ksubtextstyle,
+                                  ),
+                                ],
                               ),
                               SizedBox(
-                                height: SizeConfig.blockSizeVertical * 4,
+                                height: SizeConfig.blockSizeVertical * 8,
                               ),
                               Row(
                                 children: [
@@ -497,12 +516,11 @@ class _waytodothoughttwoState extends State<waytodothoughttwo> {
                           ],
                         ),
                       ),
-                      Container(
-                        margin: kcontainermargin,
-                        child: Row(
-                          children: [
-                            Expanded(
-                              child: Container(
+                      Row(
+                        children: [
+                          Column(
+                            children: [
+                              Container(
                                 margin: EdgeInsets.all(10),
                                 height: SizeConfig.blockSizeVertical * 13,
                                 width: SizeConfig.blockSizeHorizontal * 47,
@@ -517,89 +535,78 @@ class _waytodothoughttwoState extends State<waytodothoughttwo> {
                                     ),
                                   ],
                                   image: DecorationImage(
-                                      image: new NetworkImage(
-                                          "https://storage.googleapis.com/gd-wagtail-prod-assets/original_images/MDA2018_inline_03.jpg"),
+                                      image: new NetworkImage(url),
                                       fit: BoxFit.fill),
                                 ),
                               ),
-                            ),
-                            Expanded(
-                              child: Container(
-                                margin: EdgeInsets.all(10),
-                                child: Column(
-                                  crossAxisAlignment:
-                                      CrossAxisAlignment.baseline,
-                                  textBaseline: TextBaseline.alphabetic,
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceEvenly,
-                                  children: [
-                                    Text(
-                                      'Find me on',
-                                      style: TextStyle(
-                                        color:
-                                            Color(0xff616161).withOpacity(.8),
-                                        fontSize: 20,
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      height: 10,
-                                    ),
-                                    Row(
-                                      children: [
-                                        Container(
-                                          height: 22,
-                                          width: 28,
-                                          decoration: BoxDecoration(
-                                            borderRadius:
-                                                BorderRadius.circular(5),
-                                            image: DecorationImage(
-                                                image: new NetworkImage(url),
-                                                fit: BoxFit.fill),
-                                          ),
-                                        ),
-                                        SizedBox(
-                                          width: 20,
-                                        ),
-                                        Container(
-                                          height: 22,
-                                          width: 28,
-                                          decoration: BoxDecoration(
-                                            borderRadius:
-                                                BorderRadius.circular(5),
-                                            image: DecorationImage(
-                                                image: new NetworkImage(url),
-                                                fit: BoxFit.fill),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    SizedBox(
-                                      height: 10,
-                                    ),
-                                    Row(
-                                      children: [
-                                        RectangularBar(
-                                          height: 15,
-                                        ),
-                                        SizedBox(
-                                          width: 5,
-                                        ),
-                                        Text(
-                                          'claire30dayHealth.com',
-                                          style: TextStyle(
-                                              color: Color(0xff616161)
-                                                  .withOpacity(.8),
-                                              fontSize: 12,
-                                              fontWeight: FontWeight.w500),
-                                        ),
-                                      ],
-                                    ),
-                                  ],
+                            ],
+                          ),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.baseline,
+                            textBaseline: TextBaseline.alphabetic,
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              Text(
+                                'Find me on',
+                                style: TextStyle(
+                                  color: Color(0xff616161).withOpacity(.8),
+                                  fontSize: 20,
                                 ),
                               ),
-                            ),
-                          ],
-                        ),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              Row(
+                                children: [
+                                  Container(
+                                    height: 22,
+                                    width: 28,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(5),
+                                      image: DecorationImage(
+                                          image: new NetworkImage(url),
+                                          fit: BoxFit.fill),
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: 20,
+                                  ),
+                                  Container(
+                                    height: 22,
+                                    width: 28,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(5),
+                                      image: DecorationImage(
+                                          image: new NetworkImage(url),
+                                          fit: BoxFit.fill),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              Row(
+                                children: [
+                                  RectangularBar(
+                                    height: 15,
+                                  ),
+                                  SizedBox(
+                                    width: 5,
+                                  ),
+                                  Text(
+                                    'claire30dayHealth.com',
+                                    style: TextStyle(
+                                        color:
+                                            Color(0xff616161).withOpacity(.8),
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.w500),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ],
                       ),
                     ],
                   ),

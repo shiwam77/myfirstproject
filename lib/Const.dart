@@ -21,14 +21,14 @@ final kinfotextstyle = TextStyle(
     fontSize: 16,
     fontWeight: FontWeight.w500);
 //italic style for status
-final kitalictextstyle = TextStyle(
+const kitalictextstyle = TextStyle(
   color: Color(0xff616161),
   fontSize: 16,
   fontWeight: FontWeight.w500,
   fontStyle: FontStyle.italic,
 );
 
-const kcontainermargin = EdgeInsets.fromLTRB(20, 20, 20, 20);
+const kcontainermargin = EdgeInsets.fromLTRB(20, 20, 10, 20);
 
 class ButtomButtons extends StatelessWidget {
   ButtomButtons({@required this.text, this.width, @required this.onPressed});
@@ -64,7 +64,7 @@ class ImageContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: SizeConfig.blockSizeVertical * 22,
+      height: SizeConfig.blockSizeVertical * 25,
       width: SizeConfig.blockSizeHorizontal * 35,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(8),

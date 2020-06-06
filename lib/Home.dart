@@ -39,55 +39,36 @@ class _HomeState extends State<Home> {
                   children: <Widget>[
                     Expanded(
                       child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Expanded(
+                          Container(
+                            margin: kcontainermargin,
                             child: Container(
-                              margin: kcontainermargin,
-                              child: Container(
-                                width: SizeConfig.blockSizeHorizontal * 35,
-                                child: Stack(
-                                  children: [
-                                    ImageContainer(
-                                      imgUrl: url,
-                                    ),
-                                    Positioned(
-                                      bottom: 15,
-                                      child: Container(
-                                        height: 25,
-                                        alignment: Alignment.center,
-                                        width:
-                                            SizeConfig.blockSizeHorizontal * 35,
-                                        color:
-                                            Color(0xffFFFFFF).withOpacity(.9),
-                                        child: Text(
-                                          'CREATOR',
-                                          textAlign: TextAlign.center,
-                                          style: TextStyle(
-                                            color: Color(0xff616161),
-                                          ),
+                              alignment: Alignment.bottomCenter,
+                              padding: new EdgeInsets.only(bottom: 15.0),
+                              child: Stack(
+                                children: [
+                                  ImageContainer(
+                                    imgUrl: url,
+                                  ),
+                                  Positioned(
+                                    bottom: 15,
+                                    child: Container(
+                                      height: 25,
+                                      alignment: Alignment.center,
+                                      width:
+                                          SizeConfig.blockSizeHorizontal * 35,
+                                      color: Color(0xffFFFFFF).withOpacity(.9),
+                                      child: Text(
+                                        'CREATOR',
+                                        textAlign: TextAlign.center,
+                                        style: TextStyle(
+                                          color: Color(0xff616161),
                                         ),
                                       ),
                                     ),
-                                  ],
-                                ),
-                              ),
-                              alignment: Alignment.bottomCenter,
-                              padding: new EdgeInsets.only(bottom: 15.0),
-                              height: 190,
-                              width: SizeConfig.blockSizeHorizontal * 35,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(8),
-                                boxShadow: [
-                                  BoxShadow(
-                                    blurRadius: 10,
-                                    color: Color(0xff000000).withOpacity(.6),
-                                    spreadRadius: 1,
                                   ),
                                 ],
-                                image: DecorationImage(
-                                    image: new NetworkImage(
-                                        "https://storage.googleapis.com/gd-wagtail-prod-assets/original_images/MDA2018_inline_03.jpg"),
-                                    fit: BoxFit.fill),
                               ),
                             ),
                           ),
@@ -220,18 +201,25 @@ class _HomeState extends State<Home> {
                             child: Container(
                               margin: kcontainermargin,
                               child: Column(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
                                 crossAxisAlignment: CrossAxisAlignment.end,
                                 children: [
-                                  Text(
-                                    '3152',
-                                    style: kmaintextstyle,
-                                  ),
-                                  Text(
-                                    'POSTS',
-                                    style: ksubtextstyle,
+                                  Column(
+                                    crossAxisAlignment: CrossAxisAlignment.end,
+                                    children: [
+                                      Text(
+                                        '3212',
+                                        style: kmaintextstyle,
+                                      ),
+                                      Text(
+                                        'POSTS',
+                                        style: ksubtextstyle,
+                                      ),
+                                    ],
                                   ),
                                   SizedBox(
-                                    height: SizeConfig.blockSizeVertical * 7,
+                                    height: SizeConfig.blockSizeVertical * 8,
                                   ),
                                   Row(
                                     mainAxisAlignment: MainAxisAlignment.end,
@@ -277,7 +265,7 @@ class _HomeState extends State<Home> {
                                     ),
                                   ],
                                 ),
-                                height: SizeConfig.blockSizeVertical * 22,
+                                height: SizeConfig.blockSizeVertical * 25,
                                 width: double.infinity,
                                 child: Carousel(
                                   autoplay: true,
@@ -304,29 +292,32 @@ class _HomeState extends State<Home> {
                     Expanded(
                       child: Row(
                         children: [
-                          Expanded(
-                            child: Container(
-                              margin: kcontainermargin,
-                              child: ImageContainer(imgUrl: url),
-                            ),
+                          Container(
+                            margin: kcontainermargin,
+                            child: ImageContainer(imgUrl: url),
                           ),
                           Expanded(
                             child: Container(
                               margin: kcontainermargin,
                               child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.baseline,
-                                textBaseline: TextBaseline.alphabetic,
+                                crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text(
-                                    '21%',
-                                    style: kmaintextstyle,
-                                  ),
-                                  Text(
-                                    'ENGAGEMENT',
-                                    style: ksubtextstyle,
+                                  Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        '21%',
+                                        style: kmaintextstyle,
+                                      ),
+                                      Text(
+                                        'ENGAGEMENT',
+                                        style: ksubtextstyle,
+                                      ),
+                                    ],
                                   ),
                                   SizedBox(
-                                    height: SizeConfig.blockSizeVertical * 3,
+                                    height: SizeConfig.blockSizeVertical * 8,
                                   ),
                                   Row(
                                     children: [
@@ -389,11 +380,9 @@ class _HomeState extends State<Home> {
                               ),
                             ),
                           ),
-                          Expanded(
-                            child: Container(
-                              margin: kcontainermargin,
-                              child: ImageContainer(imgUrl: url),
-                            ),
+                          Container(
+                            margin: kcontainermargin,
+                            child: ImageContainer(imgUrl: url),
                           ),
                         ],
                       ),
@@ -401,11 +390,9 @@ class _HomeState extends State<Home> {
                     Expanded(
                       child: Row(
                         children: [
-                          Expanded(
-                            child: Container(
-                              margin: kcontainermargin,
-                              child: ImageContainer(imgUrl: url),
-                            ),
+                          Container(
+                            margin: kcontainermargin,
+                            child: ImageContainer(imgUrl: url),
                           ),
                           Expanded(
                             child: Container(
@@ -413,16 +400,22 @@ class _HomeState extends State<Home> {
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text(
-                                    '221%',
-                                    style: kmaintextstyle,
-                                  ),
-                                  Text(
-                                    'REACH',
-                                    style: ksubtextstyle,
+                                  Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        '221%',
+                                        style: kmaintextstyle,
+                                      ),
+                                      Text(
+                                        'REACH',
+                                        style: ksubtextstyle,
+                                      ),
+                                    ],
                                   ),
                                   SizedBox(
-                                    height: SizeConfig.blockSizeVertical * 3,
+                                    height: SizeConfig.blockSizeVertical * 8,
                                   ),
                                   Row(
                                     children: [
@@ -448,7 +441,7 @@ class _HomeState extends State<Home> {
                                         ],
                                       ),
                                     ],
-                                  )
+                                  ),
                                 ],
                               ),
                             ),
@@ -491,7 +484,7 @@ class _HomeState extends State<Home> {
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.fromLTRB(40, 10, 40, 10),
+                      margin: EdgeInsets.all(20),
                       child: Column(
                         children: [
                           Row(
@@ -640,14 +633,6 @@ class _HomeState extends State<Home> {
                         ],
                       ),
                     ),
-                    FloatingActionButton(
-                        backgroundColor: Colors.red,
-                        onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => MyProfile()));
-                        })
                   ],
                 ),
               ),
