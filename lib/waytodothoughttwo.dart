@@ -224,9 +224,6 @@ class _waytodothoughttwoState extends State<waytodothoughttwo> {
                                         ),
                                       ],
                                     ),
-                                    SizedBox(
-                                      height: SizeConfig.blockSizeVertical * 8,
-                                    ),
                                     Row(
                                       crossAxisAlignment:
                                           CrossAxisAlignment.end,

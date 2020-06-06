@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'Home.dart';
-import 'MyProfile.dart';
+
 import 'waytodothoughttwo.dart';
 
 void main() {

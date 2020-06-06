@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_pro/carousel_pro.dart';
 import 'Const.dart';
-import 'MyProfile.dart';
+
 import 'Responsive.dart';
 
 //Done by using Expanded Widget
@@ -35,11 +35,9 @@ class _HomeState extends State<Home> {
               child: IntrinsicHeight(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
                     Expanded(
                       child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Container(
                             margin: kcontainermargin,
@@ -76,45 +74,48 @@ class _HomeState extends State<Home> {
                             child: Container(
                               margin: kcontainermargin,
                               child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                mainAxisAlignment: MainAxisAlignment.start,
                                 children: [
-                                  Text(
-                                    "Clair - Fit 30 Days",
-                                    style: TextStyle(
-                                        color: Color(0xff616161),
-                                        fontSize: 18.0),
-                                  ),
-                                  Text(
-                                    '@humming_together',
-                                    style: TextStyle(
-                                        color:
-                                            Color(0xff424242).withOpacity(.5),
-                                        fontSize: 14.0),
-                                  ),
-                                  ButtonTheme(
-                                    minWidth: 212.0,
-                                    height: 25.0,
-                                    child: RaisedButton(
-                                      child: FittedBox(
-                                          child: Text("HEALTH & LIFESTYLE")),
-                                      onPressed: () {},
-                                      color: Color(0xff5567C9).withOpacity(.7),
-                                      textColor: Colors.white,
-                                      splashColor: Colors.grey,
+                                  Expanded(
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          "Clair - Fit 30 Days",
+                                          style: TextStyle(
+                                              color: Color(0xff616161),
+                                              fontSize: 18.0),
+                                        ),
+                                        Text(
+                                          '@humming_together',
+                                          style: TextStyle(
+                                              color: Color(0xff424242)
+                                                  .withOpacity(.5),
+                                              fontSize: 14.0),
+                                        ),
+                                        ButtonTheme(
+                                          minWidth: double.infinity,
+                                          height: 25.0,
+                                          child: RaisedButton(
+                                            child: FittedBox(
+                                                child:
+                                                    Text("HEALTH & LIFESTYLE")),
+                                            onPressed: () {},
+                                            color: Color(0xff5567C9)
+                                                .withOpacity(.7),
+                                            textColor: Colors.white,
+                                            splashColor: Colors.grey,
+                                          ),
+                                        ),
+                                      ],
                                     ),
                                   ),
                                   Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
                                     children: [
-                                      Container(
+                                      Expanded(
                                         child: Column(
                                           crossAxisAlignment:
-                                              CrossAxisAlignment.baseline,
-                                          textBaseline: TextBaseline.alphabetic,
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.spaceBetween,
+                                              CrossAxisAlignment.start,
                                           children: [
                                             Row(
                                               crossAxisAlignment:
@@ -136,20 +137,26 @@ class _HomeState extends State<Home> {
                                                 ),
                                               ],
                                             ),
-                                            Text(
-                                              'FOLLOWER',
-                                              style: ksubtextstyle,
+                                            FittedBox(
+                                              child: Text(
+                                                'FOLLOWER',
+                                                style: ksubtextstyle,
+                                              ),
                                             ),
                                           ],
                                         ),
                                       ),
                                       Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.end,
                                         children: [
                                           Row(
                                             children: [
                                               Column(
                                                 crossAxisAlignment:
                                                     CrossAxisAlignment.end,
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.start,
                                                 children: [
                                                   Text(
                                                     '10% MOM',
@@ -173,7 +180,7 @@ class _HomeState extends State<Home> {
                                                 ],
                                               ),
                                               SizedBox(
-                                                width: 5,
+                                                width: 10,
                                               ),
                                               RectangularBar(
                                                 height: 31,
@@ -181,8 +188,8 @@ class _HomeState extends State<Home> {
                                             ],
                                           ),
                                           SizedBox(
-                                            height: 50,
-                                          ),
+                                            height: 80,
+                                          )
                                         ],
                                       ),
                                     ],
@@ -201,25 +208,23 @@ class _HomeState extends State<Home> {
                             child: Container(
                               margin: kcontainermargin,
                               child: Column(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
                                 crossAxisAlignment: CrossAxisAlignment.end,
                                 children: [
-                                  Column(
-                                    crossAxisAlignment: CrossAxisAlignment.end,
-                                    children: [
-                                      Text(
-                                        '3212',
-                                        style: kmaintextstyle,
-                                      ),
-                                      Text(
-                                        'POSTS',
-                                        style: ksubtextstyle,
-                                      ),
-                                    ],
-                                  ),
-                                  SizedBox(
-                                    height: SizeConfig.blockSizeVertical * 8,
+                                  Expanded(
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.end,
+                                      children: [
+                                        Text(
+                                          '3212',
+                                          style: kmaintextstyle,
+                                        ),
+                                        Text(
+                                          'POSTS',
+                                          style: ksubtextstyle,
+                                        ),
+                                      ],
+                                    ),
                                   ),
                                   Row(
                                     mainAxisAlignment: MainAxisAlignment.end,
@@ -302,22 +307,21 @@ class _HomeState extends State<Home> {
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        '21%',
-                                        style: kmaintextstyle,
-                                      ),
-                                      Text(
-                                        'ENGAGEMENT',
-                                        style: ksubtextstyle,
-                                      ),
-                                    ],
-                                  ),
-                                  SizedBox(
-                                    height: SizeConfig.blockSizeVertical * 8,
+                                  Expanded(
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          '21%',
+                                          style: kmaintextstyle,
+                                        ),
+                                        Text(
+                                          'ENGAGEMENT',
+                                          style: ksubtextstyle,
+                                        ),
+                                      ],
+                                    ),
                                   ),
                                   Row(
                                     children: [
@@ -400,22 +404,21 @@ class _HomeState extends State<Home> {
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        '221%',
-                                        style: kmaintextstyle,
-                                      ),
-                                      Text(
-                                        'REACH',
-                                        style: ksubtextstyle,
-                                      ),
-                                    ],
-                                  ),
-                                  SizedBox(
-                                    height: SizeConfig.blockSizeVertical * 8,
+                                  Expanded(
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          '221%',
+                                          style: kmaintextstyle,
+                                        ),
+                                        Text(
+                                          'REACH',
+                                          style: ksubtextstyle,
+                                        ),
+                                      ],
+                                    ),
                                   ),
                                   Row(
                                     children: [
@@ -484,7 +487,7 @@ class _HomeState extends State<Home> {
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.all(20),
+                      margin: EdgeInsets.fromLTRB(30, 0, 30, 10),
                       child: Column(
                         children: [
                           Row(
@@ -517,15 +520,19 @@ class _HomeState extends State<Home> {
                               ),
                             ],
                           ),
-                          ButtonTheme(
-                            minWidth: 253,
-                            height: 32.0,
-                            child: RaisedButton(
-                              child: Text("LETS COLLAB!"),
-                              onPressed: () {},
-                              color: Color(0xff3F51B5),
-                              textColor: Color(0xffFFFFFF),
-                              splashColor: Colors.grey,
+                          Padding(
+                            padding:
+                                const EdgeInsets.symmetric(horizontal: 30.0),
+                            child: ButtonTheme(
+                              minWidth: double.infinity,
+                              height: 32.0,
+                              child: RaisedButton(
+                                child: Text("LETS COLLAB!"),
+                                onPressed: () {},
+                                color: Color(0xff3F51B5),
+                                textColor: Color(0xffFFFFFF),
+                                splashColor: Colors.grey,
+                              ),
                             ),
                           ),
                         ],
@@ -535,26 +542,23 @@ class _HomeState extends State<Home> {
                       margin: kcontainermargin,
                       child: Row(
                         children: [
-                          Expanded(
-                            child: Container(
-                              margin: EdgeInsets.all(10),
-                              height: SizeConfig.blockSizeVertical * 13,
-                              width: SizeConfig.blockSizeHorizontal * 47,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(8),
-                                boxShadow: [
-                                  BoxShadow(
-                                    blurRadius: 10,
-                                    color: Color(0xff000000).withOpacity(.6),
-                                    spreadRadius: 1,
-                                    // changes position of shadow
-                                  ),
-                                ],
-                                image: DecorationImage(
-                                    image: new NetworkImage(
-                                        "https://storage.googleapis.com/gd-wagtail-prod-assets/original_images/MDA2018_inline_03.jpg"),
-                                    fit: BoxFit.fill),
-                              ),
+                          Container(
+                            margin: EdgeInsets.all(10),
+                            height: SizeConfig.blockSizeVertical * 13,
+                            width: SizeConfig.blockSizeHorizontal * 47,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(8),
+                              boxShadow: [
+                                BoxShadow(
+                                  blurRadius: 10,
+                                  color: Color(0xff000000).withOpacity(.6),
+                                  spreadRadius: 1,
+                                  // changes position of shadow
+                                ),
+                              ],
+                              image: DecorationImage(
+                                  image: new NetworkImage(url),
+                                  fit: BoxFit.fill),
                             ),
                           ),
                           Expanded(
