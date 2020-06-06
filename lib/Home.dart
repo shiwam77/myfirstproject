@@ -617,14 +617,8 @@ class _HomeState extends State<Home> {
                                   ),
                                   Row(
                                     children: [
-                                      Container(
+                                      RectangularBar(
                                         height: 15,
-                                        width: 6,
-                                        decoration: BoxDecoration(
-                                          borderRadius:
-                                              BorderRadius.circular(1),
-                                          color: Color(0xff64DD17),
-                                        ),
                                       ),
                                       SizedBox(
                                         width: 5,
