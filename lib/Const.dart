@@ -5,54 +5,60 @@ import 'Responsive.dart';
 const kPagetitle =
     TextStyle(fontSize: 22.0, color: Color.fromRGBO(97, 97, 97, 0.3));
 /////////21//////////
-const kmaintextstyle = TextStyle(
+final kmaintextstyle = TextStyle(
   color: Color(0xff616161),
-  fontSize: 56,
+  fontSize: 6.7 * ktextmultiplier,
   fontWeight: FontWeight.w500,
 );
 //FOLLOWER///
 final ksubtextstyle = TextStyle(
     color: Color(0xff616161).withOpacity(.6),
-    fontSize: 18,
+    fontSize: 2.1 * ktextmultiplier,
     fontWeight: FontWeight.w500);
 //comments,likes///
 final kinfotextstyle = TextStyle(
     color: Color(0xff616161).withOpacity(.8),
-    fontSize: 16,
+    fontSize: 1.9 * ktextmultiplier,
     fontWeight: FontWeight.w500);
 //italic style for status
-const kitalictextstyle = TextStyle(
+final kitalictextstyle = TextStyle(
   color: Color(0xff616161),
-  fontSize: 16,
+  fontSize: 1.9 * ktextmultiplier,
   fontWeight: FontWeight.w500,
   fontStyle: FontStyle.italic,
 );
 
 const kcontainermargin = EdgeInsets.fromLTRB(20, 20, 10, 20);
+final double kImageheightmultiplier = SizeConfig.blockSizeVertical;
+final double kImagewidthmultiplier = SizeConfig.blockSizeHorizontal;
+final double ktextmultiplier = SizeConfig.blockSizeVertical;
 
-class ButtomButtons extends StatelessWidget {
-  ButtomButtons({@required this.text, this.width, @required this.onPressed});
+class GestureButtons extends StatelessWidget {
+  GestureButtons({@required this.text, this.width, @required this.onPressed});
   final double width;
   final String text;
   final Function onPressed;
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(vertical: 15.0),
-      child: Material(
-        color: Color(0xffECEFF1),
-        borderRadius: BorderRadius.all(Radius.circular(30.0)),
-        elevation: 5.0,
-        child: MaterialButton(
-          onPressed: onPressed,
-          minWidth: width,
+    return GestureDetector(
+      onTap: onPressed,
+      child: Container(
+        height: 5 * SizeConfig.blockSizeVertical,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(
+            horizontal: 10,
+          ),
           child: Text(
             text,
             style: TextStyle(
               color: Color(0xff616161),
+              fontSize: 2.1 * ktextmultiplier,
             ),
           ),
         ),
+        alignment: Alignment.center,
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(15), color: Color(0xffECEFF1)),
       ),
     );
   }
@@ -64,8 +70,8 @@ class ImageContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: SizeConfig.blockSizeVertical * 25,
-      width: SizeConfig.blockSizeHorizontal * 35,
+      height: 25.0 * kImageheightmultiplier,
+      width: 35.0 * kImagewidthmultiplier,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(8),
         boxShadow: [

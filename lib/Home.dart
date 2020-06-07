@@ -19,6 +19,7 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     SizeConfig().init(context);
 
+    print(SizeConfig.blockSizeVertical);
     return Scaffold(
         appBar: AppBar(
           title: Text(
@@ -301,59 +302,57 @@ class _HomeState extends State<Home> {
                             margin: kcontainermargin,
                             child: ImageContainer(imgUrl: url),
                           ),
-                          Expanded(
-                            child: Container(
-                              margin: kcontainermargin,
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Expanded(
-                                    child: Column(
+                          Container(
+                            margin: kcontainermargin,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Expanded(
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        '21%',
+                                        style: kmaintextstyle,
+                                      ),
+                                      Text(
+                                        'ENGAGEMENT',
+                                        style: ksubtextstyle,
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                Row(
+                                  children: [
+                                    RectangularBar(
+                                      height: 60,
+                                    ),
+                                    SizedBox(
+                                      width: 10,
+                                    ),
+                                    Column(
                                       crossAxisAlignment:
-                                          CrossAxisAlignment.start,
+                                          CrossAxisAlignment.baseline,
+                                      textBaseline: TextBaseline.alphabetic,
                                       children: [
                                         Text(
-                                          '21%',
-                                          style: kmaintextstyle,
+                                          '42K Likes',
+                                          style: kinfotextstyle,
                                         ),
                                         Text(
-                                          'ENGAGEMENT',
-                                          style: ksubtextstyle,
+                                          '42K Comments',
+                                          style: kinfotextstyle,
+                                        ),
+                                        Text(
+                                          'this month',
+                                          style: kinfotextstyle,
                                         ),
                                       ],
                                     ),
-                                  ),
-                                  Row(
-                                    children: [
-                                      RectangularBar(
-                                        height: 60,
-                                      ),
-                                      SizedBox(
-                                        width: 10,
-                                      ),
-                                      Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.baseline,
-                                        textBaseline: TextBaseline.alphabetic,
-                                        children: [
-                                          Text(
-                                            '42K Likes',
-                                            style: kinfotextstyle,
-                                          ),
-                                          Text(
-                                            '42K Comments',
-                                            style: kinfotextstyle,
-                                          ),
-                                          Text(
-                                            'this month',
-                                            style: kinfotextstyle,
-                                          ),
-                                        ],
-                                      ),
-                                    ],
-                                  )
-                                ],
-                              ),
+                                  ],
+                                )
+                              ],
                             ),
                           ),
                         ],
@@ -463,7 +462,7 @@ class _HomeState extends State<Home> {
                               'Collaborate with me!',
                               style: TextStyle(
                                 color: Color(0xff616161),
-                                fontSize: 20,
+                                fontSize: 2.2 * ktextmultiplier,
                                 fontWeight: FontWeight.w500,
                               ),
                             ),
@@ -479,7 +478,7 @@ class _HomeState extends State<Home> {
                               'I am open to business opportunities from the members of the lounge',
                               style: TextStyle(
                                 color: Color(0xff616161),
-                                fontSize: 16,
+                                fontSize: 1.9 * ktextmultiplier,
                               ),
                             ),
                           ),
@@ -493,36 +492,39 @@ class _HomeState extends State<Home> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              ButtomButtons(
+                              GestureButtons(
                                 text: 'colabs',
                                 onPressed: () {},
                               ),
-                              ButtomButtons(
+                              GestureButtons(
                                 text: 'shout outs',
                                 onPressed: () {},
                               ),
-                              ButtomButtons(
+                              GestureButtons(
                                 text: 'campaigns',
                                 onPressed: () {},
                               ),
                             ],
                           ),
+                          SizedBox(
+                            height: 20,
+                          ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceAround,
                             children: [
-                              ButtomButtons(
+                              GestureButtons(
                                 text: 'gigs',
                                 onPressed: () {},
                               ),
-                              ButtomButtons(
+                              GestureButtons(
                                 text: 'product reviews ',
                                 onPressed: () {},
                               ),
                             ],
                           ),
                           Padding(
-                            padding:
-                                const EdgeInsets.symmetric(horizontal: 30.0),
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 30.0, vertical: 10),
                             child: ButtonTheme(
                               minWidth: double.infinity,
                               height: 32.0,
@@ -545,7 +547,7 @@ class _HomeState extends State<Home> {
                           Container(
                             margin: EdgeInsets.all(10),
                             height: SizeConfig.blockSizeVertical * 13,
-                            width: SizeConfig.blockSizeHorizontal * 47,
+                            width: SizeConfig.blockSizeHorizontal * 40,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(8),
                               boxShadow: [
@@ -620,13 +622,15 @@ class _HomeState extends State<Home> {
                                       SizedBox(
                                         width: 5,
                                       ),
-                                      Text(
-                                        'claire30dayHealth.com',
-                                        style: TextStyle(
-                                            color: Color(0xff616161)
-                                                .withOpacity(.8),
-                                            fontSize: 12,
-                                            fontWeight: FontWeight.w500),
+                                      FittedBox(
+                                        child: Text(
+                                          'claire30dayHealth.com',
+                                          style: TextStyle(
+                                              color: Color(0xff616161)
+                                                  .withOpacity(.8),
+                                              fontSize: 12,
+                                              fontWeight: FontWeight.w500),
+                                        ),
                                       ),
                                     ],
                                   ),

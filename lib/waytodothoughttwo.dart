@@ -275,6 +275,7 @@ class _waytodothoughttwoState extends State<waytodothoughttwo> {
                           Column(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisSize: MainAxisSize.min,
                             children: [
                               Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -472,15 +473,15 @@ class _waytodothoughttwoState extends State<waytodothoughttwo> {
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                ButtomButtons(
+                                GestureButtons(
                                   text: 'colabs',
                                   onPressed: () {},
                                 ),
-                                ButtomButtons(
+                                GestureButtons(
                                   text: 'shout outs',
                                   onPressed: () {},
                                 ),
-                                ButtomButtons(
+                                GestureButtons(
                                   text: 'campaigns',
                                   onPressed: () {},
                                 ),
@@ -489,11 +490,11 @@ class _waytodothoughttwoState extends State<waytodothoughttwo> {
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceAround,
                               children: [
-                                ButtomButtons(
+                                GestureButtons(
                                   text: 'gigs',
                                   onPressed: () {},
                                 ),
-                                ButtomButtons(
+                                GestureButtons(
                                   text: 'product reviews ',
                                   onPressed: () {},
                                 ),
